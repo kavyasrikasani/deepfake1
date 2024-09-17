@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - DeepFake Detection</title>
+    <link rel="stylesheet" href="re.css">
+    <title>Background Image Example</title>
+
+</head>
+<body>
+    <header>
+        <h1>Register</h1>
+        <nav>
+            <button onclick="location.href='index.html'">Home</button>
+        </nav>
+    </header>
+
+    <section>
+        <form id="registerForm">
+            <label for="firstName">First Name:</label>
+            <input type="text" id="firstName" placeholder="Enter your first name" required>
+            
+            <label for="lastName">Last Name:</label>
+            <input type="text" id="lastName" placeholder="Enter your last name" required>
+            
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" required>
+            
+            <label for="regEmail">Email:</label>
+            <input type="email" id="regEmail" placeholder="Enter your email" required>
+            
+            <label for="password">Password:</label>
+            <input type="password" id="password" placeholder="Create a password" required>
+            
+            <label for="confirmPassword">Confirm Password:</label>
+            <input type="password" id="confirmPassword" placeholder="Confirm your password" required>
+            
+            <div id="error" style="color: red; display: none;">Passwords do not match or an error occurred.</div>
+            
+            <button type="submit">Register</button>
+        </form>
+    </section>
+
+    <script>
+        document.getElementById('registerForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent default form submission
+            
+            // Get input values
+            const firstName = document.getElementById('firstName').value;
+            const lastName = document.getElementById('lastName').value;
+            const dob = document.getElementById('dob').value;
+            const regEmail = document.getElementById('regEmail').value;
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirmPassword').value;
+            
+            // Validate input
+            if (firstName && lastName && dob && regEmail && password && confirmPassword) {
+                if (password === confirmPassword) {
+                    // Store user data in localStorage (simulating a backend here)
+                    localStorage.setItem('userEmail', regEmail);
+                    localStorage.setItem('userPassword', password);
+                    // Redirect to login page
+                    window.location.href = 'login.html';
+                } else {
+                    document.getElementById('error').innerText = 'Passwords do not match.';
+                    document.getElementById('error').style.display = 'block';
+                }
+            } else {
+                document.getElementById('error').innerText = 'Please fill in all fields.';
+                document.getElementById('error').style.display = 'block';
+            }
+        });
+    </script>
+</body>
+</html>

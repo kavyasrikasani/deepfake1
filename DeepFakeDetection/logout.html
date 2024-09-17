@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logout - DeepFake Detection</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Logging Out</h1>
+    </header>
+
+    <section>
+        <p>Logging you out...</p>
+    </section>
+
+    <script>
+        // Clear user data from localStorage
+        localStorage.removeItem('userEmail');
+        localStorage.removeItem('userPassword');
+
+        // Redirect to login page
+        window.location.href = 'login.html';
+    </script>
+</body>
+</html>

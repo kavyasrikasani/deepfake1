@@ -1,0 +1,91 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    background-image: url('background.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+/* Rest of your existing styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+    position: relative;
+}
+
+/* Style for the logo */
+#logo {
+    width: 100px;
+    height: auto;
+    position: relative;
+}
+
+/* Center the heading in the header */
+header h1 {
+    flex: 1;
+    text-align: center;
+    margin: 0;
+}
+
+/* Adjust the navigation button styling */
+nav {
+    display: flex;
+    justify-content: flex-end;
+    margin: 0;
+}
+
+nav button {
+    margin: 0 10px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+nav button:hover {
+    background-color: #0056b3;
+}
+
+/* Form Section Styles */
+form {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin: 20px auto;
+    background: rgba(255, 255, 255, 0.8); /* Semi-transparent background for form */
+    padding: 20px;
+    border-radius: 8px;
+}
+
+form label, form input {
+    margin: 10px 0;
+    padding: 10px;
+}
+
+button[type="submit"] {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #218838;
+}
+
+section {
+    margin: 20px auto;
+    padding: 20px;
+    text-align: center;
+    width: 80%;
+    max-width: 600px;
+}
